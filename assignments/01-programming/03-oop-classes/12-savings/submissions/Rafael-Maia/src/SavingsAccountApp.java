@@ -13,7 +13,7 @@ public class SavingsAccountApp {
         double annualInterestRate = scanner.nextDouble();
 
         SavingsAccount account = new SavingsAccount(initialBalance);
-        SavingsAccount.setAnnualInterestRate(annualInterestRate / 100.0);
+        SavingsAccount.setAnnualInterestRate(annualInterestRate);
 
         System.out.printf(Locale.US, "%nSaldos com taxa de juros de %.1f%%%n", annualInterestRate);
 
@@ -27,7 +27,7 @@ public class SavingsAccountApp {
 
         System.out.printf(Locale.US, "%nAlterando taxa de juros anual para %.1f%%%n%n", newAnnualInterestRate);
 
-        SavingsAccount.setAnnualInterestRate(newAnnualInterestRate / 100.0);
+        SavingsAccount.setAnnualInterestRate(newAnnualInterestRate);
         account.calculateMonthlyInterest();
 
         System.out.printf(Locale.US, "Mês 13: R$%.2f%n", account.getSavingsBalance());
